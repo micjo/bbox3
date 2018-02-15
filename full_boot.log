@@ -1,0 +1,629 @@
+CFE> HELO
+CPUI
+L1CI
+HELO
+CPUI
+L1CI
+DRAM
+----
+PHYS
+STRF
+400H
+PHYE
+DDR3
+SIZ4
+SIZ3
+DINT
+USYN
+LSYN
+MFAS
+LMBE
+RACE
+PASS
+----
+ZBSS
+CODE
+DATA
+L12F
+MAIN
+FPS0
+SVOL
+NGEO
+FVLY
+FVLY
+RVOL
+J2EP
+
+
+CFE version 1.0.38-112.118 for BCM963268 (32bit,SP,BE)
+Build Date: Thu Dec  4 16:41:27 CET 2014 (g110981@RMM-P1188051)
+Copyright (C) 2000-2011 Broadcom Corporation.
+
+CFE (soft operational)
+NAND flash device: name Micron MT29F1G08AAC, id 0x2cf1 block 128KB size 131072KB
+Access type is MDIO_BUS
+External switch id = 53125 
+Chip ID: BCM63168D0, MIPS: 400MHz, DDR: 400MHz, Bus: 200MHz
+Main Thread: TP0
+Memory Test Passed
+Total Memory: 268435456 bytes (256MB)
+Boot Address: 0xb8000000
+
+NextLevelBoot U-boot @ 0x8ff00000
+
+Board IP address                  : 192.168.1.1:ffffff00  
+Host IP address                   : 192.168.1.100  
+Gateway IP address                :   
+Run from flash/host (f/h)         : f  
+Default host run file name        : vmlinux  
+Default host flash file name      : bcm963xx_fs_kernel  
+Boot delay (0-9 seconds)          : 1  
+Launch linux/uboot (l/u)          : l  
+Board Id (0-6)                    : F@ST3865b  
+Number of MAC Addresses (1-32)    : 10  
+Base MAC Address                  : 00:10:18:00:00:00  
+PSI Size (1-64) KBytes            : 24  
+Enable Backup PSI [0|1]           : 0  
+System Log Size (0-256) KBytes    : 0  
+Main Thread Number [0|1]          : 0  
+
+*** Press any key to stop auto run (1 seconds) ***
+Auto run second count down: 0
+Initializing UBI to launch u-boot!
+UBI volume uboot has id 1
+read 818904 bytes from UBI volume 1
+Ubi U-Boot Entry at 0x8ff00000
+Closing network.
+Disabling Switch ports.
+Flushing Receive Buffers...
+0 buffers found.
+Closing DMA Channels.
+Starting program at 0x8ff00000
+
+U-Boot 2011.12
+Version: 4.3.0-full (Mar 20 2013 - 14:32:35) 
+Copyright (C) 2011 - 2012 Sagemcom All rights reserved
+gpio in: 0x40cddf1c 
+board type: 00020010
+board memsize : 0x10000000
+CPU: Broadcom BCM63168D0
+DRAM:  256 MiB
+NAND:  handle_acc_control: default CORR ERR threshold  1 bits
+ACC: 16 OOB bytes per 512B ECC step; from ID probe: 16
+reqEccLevel=0, eccLevel=4
+128 MiB
+Creating 1 MTD partitions on "nand0":
+0x0000000c0000-0x000007b00000 : "mtd=1"
+UBI: attaching mtd1 to ubi0
+UBI: physical eraseblock size:   131072 bytes (128 KiB)
+UBI: logical eraseblock size:    126976 bytes
+UBI: smallest flash I/O unit:    2048
+UBI: VID header offset:          2048 (aligned 2048)
+UBI: data offset:                4096
+UBI: attached mtd1 to ubi0
+UBI: MTD device name:            "mtd=1"
+UBI: MTD device size:            122 MiB
+UBI: number of good PEBs:        978
+UBI: number of bad PEBs:         0
+UBI: max. allowed volumes:       128
+UBI: wear-leveling threshold:    256
+UBI: number of internal volumes: 1
+UBI: number of user volumes:     7
+UBI: available PEBs:             299
+UBI: total number of reserved PEBs: 679
+UBI: number of PEBs reserved for bad PEB handling: 9
+UBI: max/mean erase counter: 162/107
+Volume bootenv not found!
+*** Warning - bad CRC, using default environment
+
+Net:   BCM63xxx
+Hit any key to stop autoboot:  0 
+sb3: sb3_sagem_init()
+sb3: action: 1007
+sb3: sb3_wait_for_magic()
+sb3: action: 1002
+sb3: sb3_boot( operational )
+sb3: top available addr 0x8f8b0000, ram available = 0xf4b0000 
+sb3_load_ubivol: max_load_size=256573440
+Read 23363584 bytes from volume operational to 80400000
+sb3: image operational moved to 8e270000-8f8b8000
+gsdf ident string OK
+gsdf size OK
+gsdf auth_hash OK
+sb3: image operational has gsdf format
+gsdf ident string OK
+gsdf size OK
+gsdf auth_hash OK
+found a root CA certificate in section 0
+found a secondary certificate in section 1
+certificate chain OK
+root certificate OK  (sagemcom caCert)
+not a livebox. no subject name verification
+signature OK
+section list OK
+gsdf head_hash OK
+gsdf data_hash OK
+sb3: image operational signature OK
+BCM63xx : unregistering Ethernet driver 
+Disabling Switch ports.
+Flushing Receive Buffers...
+0 buffers found.
+Closing DMA Channels.
+sb3: No pre-boot commands
+sb3: setting kernel args
+bootm 8E28F000 
+## Booting kernel from Legacy Image at 8e28f000 ...
+   Image Name:   scOS SG751162830 (6.28.221A)
+   Created:      2015-07-10  10:55:23 UTC
+   Image Type:   MIPS Linux Kernel Image (gzip compressed)
+   Data Size:    2031616 Bytes = 1.9 MiB
+   Load Address: 80010000
+   Entry Point:  8032db40
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+Linux version 2.6.30 (sst@int-team) (gcc version 4.4.2 (GCC) ) #1 SMP PREEMPT F5
+argc 14 arg af9c032c env af9c0840 
+memsize  board_memsize = 256
+env memsize=256 
+env initrd_start=0xA0000000 
+env initrd_size=0x0 
+flash_start 0
+env flash_start=0x00000000 
+board_flash_size 0
+env flash_size=0x0 
+env ethaddr=00:01:02:03:04:05 
+arg[1] root=mtd:rootfs 
+arg[2] init=/etc/preinit 
+arg[3] ro 
+arg[4] rootfstype=squashfs 
+arg[5] console=ttyS0,115200 
+arg[6] rootfs_offset=0x0022e000 
+arg[7] rootfs_size=0x0141a000 
+arg[8] mtdparts=nand:768k(bcm),125184k(partAll),5120k(data) 
+arg[9] ubi.mtd=ubi 
+arg[10] part_main=partAll 
+arg[11] part_boot=partAll 
+arg[12] image_ubivol=operational 
+arg[13] board_type=00020010 
+BCM Flash API. Flash device is not found.
+F@ST3865b prom init
+CPU revision is: 0002a080 (Broadcom4350)
+DSL SDRAM reserved: 0x132000
+Determined physical RAM map:
+ memory: 0fece000 @ 00000000 (usable)
+Zone PFN ranges:
+  DMA      0x00000000 -> 0x00001000
+  Normal   0x00001000 -> 0x0000fece
+Movable zone start PFN for each node
+early_node_map[1] active PFN ranges
+    0: 0x00000000 -> 0x0000fece
+On node 0 totalpages: 65230
+free_area_init_node: node 0, pgdat 803f20f0, node_mem_map 81000000
+  DMA zone: 32 pages used for memmap
+  DMA zone: 0 pages reserved
+  DMA zone: 4064 pages, LIFO batch:0
+  Normal zone: 478 pages used for memmap
+  Normal zone: 60656 pages, LIFO batch:15
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 64720
+Kernel command line: root=mtd:rootfs init=/etc/preinit ro rootfstype=squashfs c 
+UBI image volume: "operational"
+wait instruction: enabled
+Primary instruction cache 64kB, VIPT, 4-way, linesize 16 bytes.
+Primary data cache 32kB, 2-way, VIPT, cache aliases, linesize 16 bytes
+NR_IRQS:128
+PID hash table entries: 1024 (order: 10, 4096 bytes)
+console [ttyS0] enabled
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+Memory: 254048k/260920k available (3223k kernel code, 6736k reserved, 770k data)
+Calibrating delay loop... 398.33 BogoMIPS (lpj=199168)
+Mount-cache hash table entries: 512
+--Kernel Config--
+  SMP=1
+  PREEMPT=1
+  DEBUG_SPINLOCK=0
+  DEBUG_MUTEXES=0
+Broadcom Logger v0.1 Jul 10 2015 11:51:36
+CPU revision is: 0002a080 (Broadcom4350)
+Primary instruction cache 64kB, VIPT, 4-way, linesize 16 bytes.
+Primary data cache 32kB, 2-way, VIPT, cache aliases, linesize 16 bytes
+Calibrating delay loop... 402.43 BogoMIPS (lpj=201216)
+Brought up 2 CPUs
+net_namespace: 1140 bytes
+NET: Registered protocol family 16
+Total Flash size: 0K with -1 sectors
+Internal 1P2 VREG will be shutdown if unused...Unused, turn it off (000088c6-00)
+registering PCI controller with io_map_base unset
+registering PCI controller with io_map_base unset
+bio: create slab <bio-0> at 0
+SCSI subsystem initialized
+pci 0000:00:00.0: reg 10 32bit mmio: [0x10004000-0x10005fff]
+pci 0000:00:00.0: supports D1 D2
+pci 0000:00:00.0: PME# supported from D0 D3hot D3cold
+pci 0000:00:00.0: PME# disabled
+pci 0000:00:09.0: reg 10 32bit mmio: [0x10002600-0x100026ff]
+pci 0000:00:0a.0: reg 10 32bit mmio: [0x10002500-0x100025ff]
+pci 0000:01:00.0: PME# supported from D0 D3hot
+pci 0000:01:00.0: PME# disabled
+pci 0000:01:00.0: PCI bridge, secondary bus 0000:02
+pci 0000:01:00.0:   IO window: disabled
+pci 0000:01:00.0:   MEM window: disabled
+pci 0000:01:00.0:   PREFETCH window: disabled
+PCI: Setting latency timer of device 0000:01:00.0 to 64
+skbFreeTask created successfully
+BLOG v3.0 Initialized
+BLOG Rule v1.0 Initialized
+Broadcom IQoS v0.1 Jul 10 2015 11:54:06 initialized
+Broadcom GBPM v0.1 Jul 10 2015 11:54:06 initialized
+NET: Registered protocol family 8
+NET: Registered protocol family 20
+NET: Registered protocol family 2
+Switched to high resolution mode on CPU 1
+Switched to high resolution mode on CPU 0
+IP route cache hash table entries: 2048 (order: 1, 8192 bytes)
+TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+TCP reno registered
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Registering unionfs 2.5.10 (for 2.6.30.10)
+fuse init (API version 7.11)
+msgmni has been set to 496
+io scheduler noop registered
+io scheduler deadline registered (default)
+PCI: Setting latency timer of device 0000:01:00.0 to 64
+Driver 'sd' needs updating - please use bus_type methods
+PPP generic driver version 2.4.2
+PPP Deflate Compression module registered
+PPP BSD Compression module registered
+NET: Registered protocol family 24
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+bcm963xx_mtd driver v1.0
+Failed to read image tag from flash
+Broadcom DSL NAND controller (BrcmNand Controller)
+-->brcmnand_scan: CS=0, numchips=1, csi=0
+mtd->oobsize=0, mtd->eccOobSize=0
+NAND_CS_NAND_XOR=00000000
+Disabling XOR on CS#0
+brcmnand_scan: Calling brcmnand_probe for CS=0
+B4: NandSelect=40000001, nandConfig=15142200, chipSelect=0
+brcmnand_read_id: CS0: dev_id=2cf18095
+After: NandSelect=40000001, nandConfig=15142200
+SBO Block size=00020000, erase shift=0, nand_config=15142200
+Block size=00020000, erase shift=17
+NAND Config: Reg=15142200, chipSize=128 MB, blockSize=128K, erase_shift=11
+busWidth=1, pageSize=2048B, page_shift=11, page_mask=000007ff
+timing1 not adjusted: 6574845b
+timing2 not adjusted: 00001e96
+brcmnand_adjust_acccontrol: gAccControl[CS=0]=00000000, ACC=f7441010
+BrcmNAND mfg 2c f1 MICRON MT29F1G08ABA 128MB on CS0
+
+Found NAND on CS0: ACC=f7441010, cfg=15142200, flashId=2cf18095, tim1=6574845b,6
+BrcmNAND version = 0x0400 128MB @00000000
+brcmnand_scan: Done brcmnand_probe
+brcmnand_scan: B4 nand_select = 40000001
+brcmnand_scan: After nand_select = 40000001
+100 CS=0, chip->ctrl->CS[0]=0
+handle_acc_control: default CORR ERR threshold  1 bits
+ECC level threshold set to 1 bits
+ECC level 4, threshold at 1 bits
+ACC: 16 OOB bytes per 512B ECC step; from ID probe: 16
+reqEccLevel=0, eccLevel=4
+190 eccLevel=4, chip->ecclevel=4, acc=f7441010
+brcmnand_scan 10
+200 CS=0, chip->ctrl->CS[0]=0
+200 chip->ecclevel=4, acc=f7441010
+page_shift=11, bbt_erase_shift=17, chip_shift=27, phys_erase_shift=17
+brcmnand_scan 220
+Brcm NAND controller version = 4.0 NAND flash size 128MB @18000000
+brcmnand_scan 230
+brcmnand_scan 40, mtd->oobsize=64, chip->ecclayout=00000000
+brcmnand_scan 42, mtd->oobsize=64, chip->ecclevel=4, isMLC=0, chip->cellinfo=0
+ECC layout=brcmnand_oob_bch4_2k
+brcmnand_scan:  mtd->oobsize=64
+brcmnand_scan: oobavail=35, eccsize=512, writesize=2048
+brcmnand_scan, eccsize=512, writesize=2048, eccsteps=4, ecclevel=4, eccbytes=7
+300 CS=0, chip->ctrl->CS[0]=0
+500 chip=8fa0bd90, CS=0, chip->ctrl->CS[0]=0
+-->brcmnand_default_bbt
+brcmnand_default_bbt: bbt_td = bbt_slc_bch4_main_descr
+Bad block table Bbt0 found at page 0000ffc0, version 0x01 for chip on CS0
+Bad block table 1tbB found at page 0000ff80, version 0x01 for chip on CS0
+brcmnand_reset_corr_threshold: default CORR ERR threshold  1 bits for CS0
+ECC level threshold default value is 1 bits for CS0
+brcmnandCET: Status -> Loaded
+brcmnand_scan 99
+Creating 5 MTD partitions on "brcmnand.0":
+0x000000000000-0x000000020000 : "bcmfs"
+0x000000020000-0x0000000c0000 : "bcmfs_update"
+0x0000000c0000-0x000007b00000 : "ubi"
+0x000007b00000-0x000007f00000 : "data"
+0x000000000000-0x000000020000 : "nvram"
+UBI: attaching mtd2 to ubi0
+UBI: physical eraseblock size:   131072 bytes (128 KiB)
+UBI: logical eraseblock size:    126976 bytes
+UBI: smallest flash I/O unit:    2048
+UBI: VID header offset:          2048 (aligned 2048)
+UBI: data offset:                4096
+Add UBI volume partitions: name=secondaryboot
+Add UBI volume partitions: name=uboot
+Add UBI volume partitions: name=permanent_param
+Add UBI volume partitions: name=rescue
+Add UBI volume partitions: name=operational
+Creating 3 MTD partitions on "operational":
+0x000000000000-0x00000001f000 : "firm_header"
+0x00000001f000-0x00000024d000 : "kernel"
+0x00000022e000-0x000001648000 : "rootfs"
+Add UBI volume partitions: name=filesystem1
+Add UBI volume partitions: name=gui
+Creating 2 MTD partitions on "gui":
+0x000000000000-0x00000001f000 : "gui_header"
+0x00000001f000-0x000000117000 : "guifs"
+UBI: attached mtd2 to ubi0
+UBI: MTD device name:            "ubi"
+UBI: MTD device size:            122 MiB
+UBI: number of good PEBs:        978
+UBI: number of bad PEBs:         0
+UBI: max. allowed volumes:       128
+UBI: wear-leveling threshold:    256
+UBI: number of internal volumes: 1
+UBI: number of user volumes:     7
+UBI: available PEBs:             299
+UBI: total number of reserved PEBs: 679
+UBI: number of PEBs reserved for bad PEB handling: 9
+UBI: max/mean erase counter: 162/107
+brcmboard: brcm_board_init entry
+PCIe: No device found - Powering down
+Serial: BCM63XX driver $Revision: 360 $
+Magic SysRq enabled (type ^ h for list of supported commands)
+ttyS0 at MMIO 0xb0000180 (irq = 13) is a BCM63XX
+ttyS1 at MMIO 0xb00001a0 (irq = 42) is a BCM63XX
+Total # RxBds=1448
+bcmPktDmaBds_init: Broadcom Packet DMA BDs initialized
+
+bcmPktDma_init: Broadcom Packet DMA Library initialized
+bcmxtmrt: Broadcom BCM3168D0 ATM/PTM Network Device v0.5 Jul 10 2015 11:53:35
+p8021ag: p8021ag_init entry
+IPSEC SPU: SUCCEEDED 
+UBI: background thread "ubi_bgt0d" started, PID 51
+GACT probability NOT on
+Mirror/redirect action on
+u32 classifier
+    input device check on 
+    Actions configured 
+GRE over IPv4 tunneling driver
+TCP cubic registered
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+IPv6 over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+Bridge firewalling registered
+Initializing MCPD Module
+Ebtables v2.0 registered
+ebt_time registered
+ebt_ftos registered
+ebt_wmm_mark registered
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+VFS: Mounted root (squashfs filesystem) readonly on device 31:12.
+Freeing unused kernel memory: 160k freed
+Warning: unable to open an initial console.
+- preinit -
+- regular preinit -
+- init -
+UBIFS: recovery needed
+UBIFS: recovery completed
+UBIFS: mounted UBI device 0, volume 5, name "filesystem1"
+UBIFS: file system size:   11046912 bytes (10788 KiB, 10 MiB, 87 LEBs)
+UBIFS: journal size:       1015809 bytes (992 KiB, 0 MiB, 6 LEBs)
+UBIFS: media format:       w4/r0 (latest is w4/r0)
+UBIFS: default compressor: lzo
+UBIFS: reserved for root:  521772 bytes (509 KiB)
+
+       _   _ _____ _    _  ___ 
+      | | | |  __ \ |  | |/ __)
+      | |_| | |  \/ |  | / /__ 
+      |  _  | | __| |/\| |  _ \
+      | | | | |_\ \  /\  / (_) )
+      \_| |_/\____/\/  \/ \___/
+
+   Embedded Sagemcom Linux Distribution
+ ---------------------------------------------------
+
+  Version: SG751162830 (6.28.221A)
+  Built: by sst@int-team on Fri Jul 10 10:56:17 CET 2015
+
+(none) login: usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+NTFS driver 2.1.29 [Flags: R/W MODULE].
+nf_conntrack version 0.5.0 (4076 buckets, 16304 max)
+[HAL-BSP]: Load ...
+[HAL-BSP]:      Manufacturer(SagemCom) Serial Number(LK15062DP162151)
+[HAL-BSP]:      Sagem Hardware ProductId(SagemcomFast3865b_BBOX3) Version(S.2.0)
+[HAL-BSP]:      Customer Hardware ProductId(b-box 3 /S) Version(2.1) Revision(1)
+[HAL-BSP]:      Firmware Version() Type(Unknown Firmware Type)
+[HAL-BSP]:      Size {Ram -> [Pp(262144) Linux(254344)] Flash ->[Pp(131072)]}
+[HAL-BSP]: Ok ...
+hard_watchdog: module license 'Sagem Communications' taints kernel.
+Disabling lock debugging due to kernel taint
+ Driver LED and BUTTON init .....
+[HAL-BSP]: kSysButtonManaged[39]: WARNING -> Button name >= Max(8)
+[HAL-BSP]: kSysButtonManaged[39]: WARNING -> Button name >= Max(8)
+[HAL-BSP]: kSysButtonManaged[39]: WARNING -> Button name >= Max(8)
+[HAL-BSP]: kSysButtonManaged[39]: WARNING -> Button name >= Max(8)
+ Driver LED and BUTTON ok .....
+ip_tables: (C) 2000-2006 Netfilter Core Team
+nf_ct_rtsp: Successfully created nf_conntrack_rtsp task
+Netfilter messages via NETLINK v0.30.
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+ctnetlink v0.93: registering with nfnetlink.
+Broadcom Ingress QoS Module  Char Driver v0.1 Jul 10 2015 10:52:55 Registered<2>
+
+Broadcom Ingress QoS ver 0.1 initialized
+BPM: tot_mem_size=268435456B (256MB), buf_mem_size=40265310B (38MB), num of buf8
+Broadcom BPM Module Char Driver v0.1 Jul 10 2015 10:52:46 Registered<244>
+[NTC bpm] bpm_set_status: BPM status : enabled 
+
+NBUFF v1.0 Initialized
+Initialized fcache state
+Broadcom Packet Flow Cache  Char Driver v2.2 Jul 10 2015 10:52:55 Registered<24>
+Created Proc FS /procfs/fcache
+Broadcom Packet Flow Cache registered with netdev chain
+Broadcom Packet Flow Cache learning via BLOG enabled.
+flwStatsThread created
+Constructed Broadcom Packet Flow Cache v2.2 Jul 10 2015 10:52:55
+chipId 0x631680D0
+Broadcom Forwarding Assist Processor (FAP) Char Driver v0.1 Jul 10 2015 10:52:4>
+Enabling SMISBUS PHYS_FAP_BASE[0] is 0x10c01000
+FAP Soft Reset Done
+4ke Reset Done
+Enabling SMISBUS PHYS_FAP_BASE[1] is 0x10c01000
+FAP Soft Reset Done
+4ke Reset Done
+FAP Debug values at 0xac19e280 0xac21e280
+Allocated FAP0 GSO Buffers (0xAC1AF308) : 1048576 bytes @ 0xAC300000
+Allocated FAP1 GSO Buffers (0xAC22F308) : 1048576 bytes @ 0xABC00000
+Allocated FAP0 TM SDRAM Queue Storage (ac1af30c) : 341376 bytes @ ac280000
+Allocated FAP1 TM SDRAM Queue Storage (ac22f30c) : 341376 bytes @ abd00000
+[NTC fapProto] fapReset  : Reset FAP Protocol layer
+[FAP0] DSPRAM : stack <0x80000000><1536>, global <0x80000600><3968>, free <2688>
+[FAP1] DSPRAM : stack <0x80000000><1536>, global <0x80000600><3968>, free <2688>
+[FAP0] PSM : addr<0x80002000>, used <23452>, free <1124>, total <24576>
+[FAP1] PSM : addr<0x80002000>, used <23452>, free <1124>, total <24576>
+[FAP0] DQM : availableMemory 14652 bytes, nextByteAddress 0xE0004948
+[FAP1] DQM : availableMemory 14652 bytes, nextByteAddress 0xE0004948
+[FAP0] GSO Buffer set to 0xAC300000
+[FAP1] GSO Buffer set to 0xABC00000
+[FAP0] FAP BPM Initialized.
+[FAP1] FAP BPM Initialized.
+fapDrv_construct: FAP0: pManagedMemory=b0820650. wastage 8 bytes
+fapDrv_construct: FAP1: pManagedMemory=b0a20650. wastage 8 bytes
+bcmPktDma_bind: FAP Driver binding successfull
+[FAP0] FAP TM: ON
+[FAP1] FAP TM: ON
+bcmxtmcfg: bcmxtmcfg_init entry
+adsl: adsl_init entry
+Broadcom BCM63168D0 Ethernet Network Device v0.1 Jul 10 2015 10:54:11
+Broadcom GMAC Char Driver v0.1 Jul 10 2015 10:54:14 Registered<249>
+Broadcom GMAC Driver v0.1 Jul 10 2015 10:54:14 Initialized
+fapDrv_psmAlloc: fapIdx=1, size: 4800, offset=b0a20650 bytes remaining 7000
+ETH Init: Ch:0 - 200 tx BDs at 0xb0a20650
+fapDrv_psmAlloc: fapIdx=0, size: 4800, offset=b0820650 bytes remaining 7000
+ETH Init: Ch:1 - 200 tx BDs at 0xb0820650
+fapDrv_psmAlloc: wastage 8 bytes
+fapDrv_psmAlloc: fapIdx=0, size: 4808, offset=b0821910 bytes remaining 2184
+ETH Init: Ch:0 - 600 rx BDs at 0xb0821910
+fapDrv_psmAlloc: wastage 8 bytes
+fapDrv_psmAlloc: fapIdx=1, size: 4808, offset=b0a21910 bytes remaining 2184
+ETH Init: Ch:1 - 600 rx BDs at 0xb0a21910
+ethsw.c : Ext switch RGMII Port 5
+dgasp: kerSysRegisterDyingGaspHandler: bcmsw registered 
+eth0: MAC Address: 00:00:00:00:00:01
+eth1: MAC Address: 00:00:00:00:00:01
+eth2: MAC Address: 00:00:00:00:00:01
+eth3: MAC Address: 00:00:00:00:00:01
+eth4: MAC Address: 00:00:00:00:00:01
+eth5: MAC Address: 00:00:00:00:00:01
+ethsw_init_config Activating eth0 (port1)...
+[NTC arl] arlEnable : Enabled ARL binding to FAP
+Broadcom Address Resolution Logic Processor (ARL) Char Driver v0.1 Jul 10 2015 >
+Broadcom 802.1Q VLAN Interface, v0.1
+--SMP support
+wl: dsl_tx_pkt_flush_len=338
+wl: high_wmark_tot=12298
+PCI: Setting latency timer of device 0000:00:00.0 to 64
+wl: passivemode=1
+wl: napimode=0
+wl0: allocskbmode=1 currallocskbsz=512
+Neither SPROM nor OTP has valid image
+wl:srom/otp not programmed, using main memory mapped srom info(wombo board)
+wl:loading /etc/wlan/bcm6362_map.bin
+srom rev:8
+wl0: Broadcom BCM435f 802.11 Wireless Controller 6.30.163.23.cpe4.12L08.1-kdb
+dgasp: kerSysRegisterDyingGaspHandler: wl0 registered 
+usbcore: registered new interface driver usblp
+usbcore: registered new interface driver usbserial
+usbserial: USB Serial Driver core
+Initializing USB Mass Storage driver...
+usbcore: registered new interface driver usb-storage
+USB Mass Storage support registered.
+USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver option
+option: v0.7.2:USB Driver for GSM modems
+unionfs: new lower inode mtime (bindex=1, name=etc)
+ADDRCONF(NETDEV_UP): eth4: link is not ready
+--OUTPUT_DROP--IN= OUT=eth4.12 SRC=0000:0000:0000:0000:0000:0000:0000:0000 DST= 
+--OUTPUT_DROP--IN= OUT=eth4.12 SRC=0000:0000:0000:0000:0000:0000:0000:0000 DST= 
+--OUTPUT_DROP--IN= OUT=eth4.12 SRC=0000:0000:0000:0000:0000:0000:0000:0000 DST= 
+--OUTPUT_DROP--IN= OUT=eth4.12 SRC=fe80:0000:0000:0000:0200:00ff:fe00:0001 DST= 
+eth4 (switch port: 5) Link UP 1000 mbps full duplex
+message received before monitor task is initialized kerSysSendtoMonitorTask 
+ADDRCONF(NETDEV_CHANGE): eth4: link becomes ready
+--OUTPUT_DROP--IN= OUT=eth4 SRC=0000:0000:0000:0000:0000:0000:0000:0000 DST=ff0 
+brcmnand_ctrl_verify_ecc: Correctable ECC error at 00000000:03d01c00
+brcmnand_refresh_blk: Performing block refresh for correctable ECC error at 3d00
+--INPUT_DROP--IN=eth4 OUT= MAC=33:33:00:00:00:02:00:08:55:41:00:29:86:dd SRC=fe 
+brcmnand_refresh_blk: block refresh success
+--INPUT_DROP--IN=eth4 OUT= MAC=33:33:00:00:00:02:00:08:55:41:00:29:86:dd SRC=fe 
+--INPUT_DROP--IN=eth4 OUT= MAC=33:33:00:00:00:02:00:08:55:41:00:29:86:dd SRC=fe 
+unionfs: new lower inode mtime (bindex=1, name=linuxigd)
+fapDrv_psmAlloc: fapIdx=1, size: 1600, offset=b0a22be0 bytes remaining 584
+XTM Init: Ch:0 - 200 rx BDs at 0xb0a22be0
+fapDrv_psmAlloc: fapIdx=1, size: 128, offset=b0a23220 bytes remaining 456
+XTM Init: Ch:1 - 16 rx BDs at 0xb0a23220
+bcmxtmrt: PTM/ATM Non-Bonding Mode configured in system 
+*** dslThread dslPid=1009
+BcmAdsl_Initialize=0xC0B83E48, g_pFnNotifyCallback=0xC0BC2BA4
+lmemhdr[2]=0x100CE000, pAdslLMem[2]=0x100CE000
+pSdramPHY=0xAFFFFFF8, 0xFFFFFFFF 0xFFDFFFFF
+*** XfaceOffset: 0x5FF90 => 0x5FF90 ***
+*** PhySdramSize got adjusted: 0xF0944 => 0x127300 ***
+AdslCoreSharedMemInit: shareMemSize=44253(44256)
+AdslCoreHwReset:  pLocSbSta=8ae48000 bkupThreshold=3072
+AdslCoreHwReset:  AdslOemDataAddr = 0xAFFAF418
+***BcmDiagsMgrRegisterClient: 0 ***
+dgasp: kerSysRegisterDyingGaspHandler: dsl0 registered 
+ADDRCONF(NETDEV_UP): eth0: link is not ready
+ADDRCONF(NETDEV_UP): eth1: link is not ready
+ADDRCONF(NETDEV_UP): eth2: link is not ready
+ADDRCONF(NETDEV_UP): eth3: link is not ready
+ADDRCONF(NETDEV_UP): eth5: link is not ready
+device vr_BR_LAN entered promiscuous mode
+device vr_BR_TV entered promiscuous mode
+device vr_BR_H_UNTAG entered promiscuous mode
+device eth4 entered promiscuous mode
+BR_LAN: port 2(eth4) entering learning state
+BR_LAN: port 2(eth4) entering forwarding state
+device wl0 entered promiscuous mode
+BR_LAN: port 3(wl0) entering learning state
+BR_LAN: port 3(wl0) entering forwarding state
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+PCI: Enabling device 0000:00:0a.0 (0000 -> 0002)
+PCI: Setting latency timer of device 0000:00:0a.0 to 64
+ehci_hcd 0000:00:0a.0: EHCI Host Controller
+ehci_hcd 0000:00:0a.0: new USB bus registered, assigned bus number 1
+ehci_hcd 0000:00:0a.0: Enabling legacy PCI PM
+ehci_hcd 0000:00:0a.0: irq 18, io mem 0x10002500
+ehci_hcd 0000:00:0a.0: USB f.f started, EHCI 1.00
+usb usb1: configuration #1 chosen from 1 choice
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 2 ports detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+PCI: Enabling device 0000:00:09.0 (0000 -> 0002)
+PCI: Setting latency timer of device 0000:00:09.0 to 64
+ohci_hcd 0000:00:09.0: OHCI Host Controller
+ohci_hcd 0000:00:09.0: new USB bus registered, assigned bus number 2
+ohci_hcd 0000:00:09.0: irq 17, io mem 0x10002600
+usb usb2: configuration #1 chosen from 1 choice
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 2 ports detected
+unionfs: new lower inode mtime (bindex=1, name=etc)
+unionfs: new lower inode mtime (bindex=1, name=etc)
+
