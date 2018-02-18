@@ -38,4 +38,6 @@ Some of the uboot commands are not running as expected. Performing go
 with the address just seems to freeze the device. Perhaps the uboot
 has been tainted with.
 
-Try reflashing uboot in CFE?
+To Try:
+* Try reflashing uboot in CFE?
+* Try all different images based on bcm63xxx
