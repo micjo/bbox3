@@ -30,4 +30,12 @@ Browsing the [OpenWRT builds](https://downloads.openwrt.org/) leads me to brcm63
 and consequently to the [FAST2704V2-squashfs-cfe.bin](https://downloads.openwrt.org/releases/17.01.4/targets/brcm63xx/generic/lede-17.01.4-brcm63xx-generic-FAST2704V2-squashfs-cfe.bin). I will
 attempt to boot this via tftpboot. The assumption is that it is from a similar brand
 and seeing as tftpboot should boot from RAM and not flash, hopefully the device will
-not be bricked
+not be bricked.
+
+[Flashing with tftp](https://wiki.openwrt.org/doc/howto/generic.flashing.tftp)
+
+Some of the uboot commands are not running as expected. Performing go
+with the address just seems to freeze the device. Perhaps the uboot
+has been tainted with.
+
+Try reflashing uboot in CFE?
